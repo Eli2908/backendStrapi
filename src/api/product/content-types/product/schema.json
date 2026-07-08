@@ -11,6 +11,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "sku": {
+      "type": "string"
+    },
     "name": {
       "type": "text"
     },
@@ -22,6 +25,43 @@
     },
     "stock": {
       "type": "decimal"
+    },
+    "cost": {
+      "type": "decimal"
+    },
+    "stockMinimum": {
+      "type": "decimal"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "products"
+    },
+    "inventory_movements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::inventory-movement.inventory-movement",
+      "mappedBy": "product"
     }
   }
 }
