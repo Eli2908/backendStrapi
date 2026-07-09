@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transporters",
+  "info": {
+    "singularName": "transporter",
+    "pluralName": "transporters",
+    "displayName": "Transporters"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
