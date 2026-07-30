@@ -14,11 +14,19 @@
 module.exports = [
   "strapi::logger",
   "strapi::errors",
-  "strapi::security",
+
+  {
+    name: "strapi::security",
+    config: {
+      contentSecurityPolicy: false,
+    },
+  },
+
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",
+
   {
     name: "strapi::session",
     config: {
@@ -27,6 +35,7 @@ module.exports = [
       },
     },
   },
+
   "strapi::favicon",
   "strapi::public",
 ];
